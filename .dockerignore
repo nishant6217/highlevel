@@ -1,0 +1,28 @@
+# Deployment files
+k8s
+Dockerfile
+Jenkinsfile*
+.dockerignore
+
+# Node artifact files
+node_modules
+
+# Log files
+*.log
+README.md
+
+# Build files
+build
+
+# Other files
+README.md
+.git
+.prettierrc
+.vscode
+eslintrc*
+swagger.json
+
+# Ignore yarn generated files
+.yarn/*
+# Include yarn release files in version control
+!.yarn/releases
