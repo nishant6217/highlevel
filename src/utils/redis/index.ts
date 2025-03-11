@@ -7,7 +7,7 @@ import { parseOrReturnJson } from "../commonHelpers";
  * @returns RedisClient instance
  * @description creates a new redis connection
  */
-//move to index.ts
+
 const redisConnection = ({
   redisHost,
   redisPort,
@@ -20,16 +20,14 @@ const redisConnection = ({
   const client = new Redis({
     host: redisHost,
     port: redisPort,
-    db: 1,
-    tls: {}, // ✅ Enable TLS
+    db: redisDB,
+    tls: {},
   });
 
-  client.on("connect", () =>
-    console.info("✅ Redis client connected with TLS")
-  );
+  client.on("connect", () => console.info(" Redis client connected with TLS"));
 
   client.on("error", async (error) => {
-    console.error({ prefixMsg: "❌ Something went wrong with Redis", error });
+    console.error({ prefixMsg: " Something went wrong with Redis", error });
   });
 
   return client;
