@@ -3,6 +3,7 @@ import { Router } from "express";
 import { HttpSuccessStatus } from "../utils/express/constants";
 import { successResponse } from "../utils/express/helpers";
 import sampleRoutes from "./sampleRoutes";
+import postRoute from "./postRoutes";
 
 const router = Router();
 
@@ -22,5 +23,6 @@ router.get("/", (_req, res) => {
 });
 
 router.use("/sample", sampleRoutes);
+router.use("/posts", postRoute);
 
 export default router;

@@ -131,4 +131,8 @@ export const SUCCESS = {
     status: HttpSuccessStatus.Ok,
     message: "Fetch success",
   },
+  createSuccess: {
+    status: HttpSuccessStatus.Ok,
+    message: "create success",
+  },
 } satisfies Record<string, TExpressSuccess>;
